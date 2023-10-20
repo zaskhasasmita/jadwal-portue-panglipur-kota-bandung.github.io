@@ -358,6 +358,34 @@ h4 {
             margin-bottom: 30px;
         }
 
+        /* popup tutor */
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 2%;
+            left: 50%;
+            width: 70%;
+            transform: translateX(-50%);
+            background: #fff;
+            color: #274237;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .popup-content {
+            text-align: center;
+        }
+
+        button {
+            margin: 20px 5px 0;
+            background-color: #f2f2f2;
+            padding: 5px 10px;
+            border: 1px solid black;
+        }
+
     </style>
 </head>
 <body>
@@ -715,6 +743,38 @@ h4 {
             <p>Semoga Membantu, dan Selamat Bertanding &#128521; &#x1F4AA;</p>
         </footer>
 
+        <div class="popup" id="popup">
+            <div class="popup-content">
+                <p>Apakah kamu butuh tutorial mencari data?</p>
+                <button id="yesButton">Boleh</button>
+                <button id="noButton">Nggga ah</button>
+            </div>
+        </div>
+
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                setTimeout(function() {
+                    showPopup();
+                }, 2000);
+            });
+
+            function showPopup() {
+                const popup = document.getElementById("popup");
+                popup.style.display = "block";
+
+                const yesButton = document.getElementById("yesButton");
+                const noButton = document.getElementById("noButton");
+
+                yesButton.addEventListener("click", function() {
+                    window.location.href = "tutor.html";
+                });
+
+                noButton.addEventListener("click", function() {
+                    popup.style.display = "none";
+                });
+            }
+        </script>
 
 </body>
 </html>
