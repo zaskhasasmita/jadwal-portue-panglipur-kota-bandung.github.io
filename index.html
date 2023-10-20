@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Oswald:wght@200;400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap" rel="stylesheet">
+    <title>Jadwal Portue Panglipur Almunawwaroh</title>
+    <style>
+        /* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    font-family: 'Nunito', Arial, Helvetica, sans-serif;
+    /* color: #333; */
+    color: white;
+    /* background: linear-gradient(45deg,#4158d0,#c850c0); */
+    /* background-color: #fafafa; */
+    background-image: linear-gradient(45deg, #7f5a7d,#704f78,#53497a,#374680, #294382 ); 
+    /* background-image: linear-gradient(45deg, #a857da, #313866 );  */
+    /* background-size: cover; */
+    background-attachment: fixed;
+    padding-top: 30px;
+
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+    /* box-shadow: 1px 1px 5px 1px rgb(190, 190, 190); */
+}
+
+
+/* style from chat gpt */
+
+.container {
+            width: 100%;
+            /* margin: 0 auto; */
+            /* padding: 20px; */
+            box-sizing: border-box;
+            border-radius: 10px;
+            padding: 0 10px;
+            overflow-x: auto;
+        }
+
+/* CSS untuk tabel */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    /* margin-bottom: 20px;  */
+    overflow: hidden;
+    color: #274237;
+    margin: 0 auto 20px;
+}
+
+table th {
+    background-color: rgba(39, 49, 79, .99); /* Warna background dark theme untuk table head */
+    color: white;
+    font-weight: 800;
+    height: 40px;
+    line-height: 40px;
+}
+
+table th, table td {
+    padding: 15px;
+    text-align: left;
+    border: none; /* Menghilangkan border dari sel tabel */
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+table tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+table {
+    border-radius: 10px; /* Border radius untuk tabel */
+    margin-top: 15px;
+}
+
+/* CSS untuk tombol Aksi */
+.action-button {
+            background-color: #33ada9;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            /* margin: 5px; */
+            cursor: pointer;
+            border-radius: 5px;
+}
+
+/* CSS untuk responsif di perangkat mobile */
+@media (max-width: 768px) {
+    table {
+        font-size: 14px; /* Mengurangi ukuran font */
+    }
+}
+@media (max-width: 572px) {
+    .container {
+        width: auto;
+    }
+    table {
+        font-size: 14px; /* Mengurangi ukuran font */
+    }
+    .con-button {
+        font-size: 0.8em;
+    }
+}
+
+/* === BASE HEADING === */ 
+h1 {
+  position: relative;
+  padding: 0 0;
+  margin: 0 30px;
+  font-family: inherit, sans-serif;
+  font-weight: bolder;
+  font-size: 30px;
+  /* color: #080808; */
+  -webkit-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+
+h1 span {
+  display: block;
+  font-size: 0.5em;
+  line-height: 1.3;
+}
+h1 em {
+  font-style: normal;
+  font-weight: 600;
+}
+.two h1 {
+  text-transform: capitalize;
+}
+.two h1:before {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 60px;
+  height: 2px;
+  content: "";
+  background-color: rgb(231, 231, 231);
+  
+}
+
+.two h1 span {
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  line-height: 3em;
+  padding-left: 0.25em;
+  /* color: rgba(0, 0, 0, 0.4); */
+  padding-bottom: 10px;
+}
+.alt-two h1 {
+  text-align:center;
+}
+.alt-two h1:before {
+  left:50%; margin-left:-30px;
+}
+
+.con-button {
+    margin: 25px;
+    display: grid;
+    justify-content: center;
+}
+
+.h4run {grid-template-columns: repeat(3, 1fr);}
+.h4bagan{grid-template-columns: repeat(3, 1fr);}
+.h4senin {grid-template-columns: repeat(3, 1fr);}
+.h4selasa {grid-template-columns: repeat(3, 1fr);}
+.h4rabu {grid-template-columns: repeat(3, 1fr);}
+.h4kamis {grid-template-columns: repeat(3, 1fr);}
+
+ .h4selasam {
+    /* display: none; */
+}
+.rundown{grid-template-columns: 1fr; }
+
+.bagan{
+    /* grid-template-columns: repeat(2, 1fr);  */
+    grid-template-columns: 1fr 1fr;
+    display: grid;
+    /* order: 4; */
+}
+
+.senin, .selasa, .rabu, .kamis, .jumat , .selasam{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    'pemasalan1 pemasalan2 pemasalan3'
+    'prestasi prestasi prestasi';
+}
+
+
+
+.senin .prestasi,
+.selasa .prestasi,
+.rabu .prestasi,
+.kamis .prestasi,
+.jumat .prestasi,
+.selasam .prestasi{
+    grid-area: prestasi;
+    border: 2px solid white;
+    background-color: rgba(255, 255, 255, 0);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.89);
+    align-items: center;
+    /* munculin */
+    display: none;
+}
+.senin .prestasi:active,
+.selasa .prestasi:active,
+.rabu .prestasi:active,
+.kamis .prestasi:active,
+.jumat .prestasi:active,
+.selasam .prestasi:active{
+    border: 2px solid rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, .4);
+    color: rgb(255, 255, 255);
+        }
+
+
+
+
+/* Sementara */
+
+
+ .kamis, .jumat,
+ .h4kamis, .h4jumat{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    'pemasalan1 pemasalan2 pemasalan3'
+    'prestasi prestasi prestasi';
+    display: none;
+}
+
+
+/* .selasa{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.selasam{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.rabu{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.kamis{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+} */
+
+h4 {
+    text-align: center;
+    margin: 10px 0 5px;
+    /* color: #888888; */
+    color: rgba(255, 255, 255, .7);
+    letter-spacing: 1px;
+}
+
+.wide-button {
+    justify-items: center;
+            display: grid;
+            margin: 5px ;
+            border-radius: 5px;
+            padding: 20px 10px;
+            /* background-color: #4CAF50; */
+            background-color: #33ada9;
+            /* border: 1px solid rgba(255, 255, 255, 0.829); */
+            box-sizing: border-box;
+            color: rgba(255, 255, 255, 1);
+            text-align: center;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            /* line-height: 25px; */
+            
+        }
+        .bagan .wide-button {
+            background-color: rgba(255, 255, 255, 0);
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            color: rgba(255, 255, 255, 0.89);
+            align-items: center;
+        }
+        .bagan .wide-button:active{
+            border: 2px solid rgb(255, 255, 255);
+            background-color: rgba(255, 255, 255, .4);
+            color: rgb(255, 255, 255);
+        }
+
+        .wide-button:active {
+            background-color: #3fd3ce;
+        }
+
+        footer {
+            display: grid;
+            color: rgba(255, 255, 255, 0.651);
+            font-size: .6em;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px 20px;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+    </style>
+</head>
+<body>
+      <div class="two">
+        <h1>JADWAL PORTUE
+          <span>Panglipur Kota Bandung</span>
+        </h1>
+      </div>
+      <div class="con-button">
+
+        <!-- Rundown -->
+        <h4 class="h4run">- Rundown (Jadwal Kegiatan) -</h4>
+        <a class="wide-button rundown" href="https://drive.google.com/file/d/1HfsbVPqobBsqu-cbnlblw1nbc0gpHvq-/view?usp=drivesdk">Lihat Rundown Acara</a>
+
+        <!-- Bagan -->
+        <h4 class="h4bagan">|<br><br>- Bagan SMA & Dewasa -</h4>
+        <div class="bagan">
+            <a class="wide-button " href="https://drive.google.com/file/d/1HkVU_WZs4Sb6wcH5AZCz3pLYyTj4Rel4/view?usp=drivesdk">Bagan Tanding SMA</a>
+            <a class="wide-button " href="https://drive.google.com/file/d/1HuLYwtk4K6zrBKmz-lvwLYqYgNbrEn8-/view?usp=drivesdk">Bagan Seni SMA</a>
+            <a class="wide-button " href="https://drive.google.com/file/d/1Hh99xMQCEal36iHFos_IxGs3J3r10OOw/view?usp=drivesdk">Bagan Tanding Dewasa</a>
+            <a class="wide-button " href="https://drive.google.com/file/d/1I1-w1sVhdzft2WjEBbjALby7EiMOjKL6/view?usp=drivesdk">Bagan Seni Dewasa</a>
+        </div>
+
+        <!-- Jadwal Senin -->
+        <h4 class="h4senin">|<br><br>- Jadwal Hari Senin (23 Oct 2023) -</h4>
+        <div class="senin">
+            <a class="wide-button" href="https://drive.google.com/file/d/1IKN29G1SJEy6q9fkNQkkOzeAmargXvE3/view?usp=drivesdk">Gelanggang&nbsp;1</a>
+            <a class="wide-button" href="https://drive.google.com/file/d/1IRhZa55guxRd_cvGC6pvCaga_2MMNPwA/view?usp=drivesdk">Gelanggang&nbsp;2</a>
+            <a class="wide-button" href="https://drive.google.com/file/d/1IThcOxkQQu_u-L2s7XZoQ9977p8WToPQ/view?usp=drivesdk">Gelanggang&nbsp;3</a>
+            <a class="wide-button prestasi" href="">Gelanggang Prestasi</a>
+        </div>
+
+        <!-- Jadwal Selasa -->
+        <h4 class="h4selasa">|<br><br>- Jadwal Hari Selasa (24 Oct 2023) -</h4>
+        <div class="selasa">
+            <a class="wide-button" href="https://drive.google.com/file/d/1IY9t2U60jRuQnM-DUWxxVSEtWu08M4Nl/view?usp=drivesd">Gelanggang&nbsp;1</a>
+            <a class="wide-button" href="https://drive.google.com/file/d/1Ib3iXbvGNQmHezP05QSY5gscbFtKXcVv/view?usp=drivesdk">Gelanggang&nbsp;2</a>
+            <a class="wide-button" href="https://drive.google.com/file/d/1IyUCXntco1fGkoSuYjQG8_5AEBA_Ml5t/view?usp=drivesdk">Gelanggang&nbsp;3</a>
+            <a class="wide-button prestasi" href="">Gelanggang Prestasi</a>
+        </div>
+
+        <!-- Jadwal Selasa Malam-->
+        <h4 class="h4selasam">|<br><br>- Jadwal Hari Selasa Malam (24 Oct 2023) -</h4>
+        <div class="selasam">
+            <a class="wide-button" href="https://drive.google.com/file/d/1J-vQMwJRkfg9MyqEMuY7-Z375kNnI09i/view?usp=drivesdk">Gelanggang&nbsp;1</a>
+            <a class="wide-button" href="https://drive.google.com/file/d/1JLUy9JJnaA-n0v-JXYO2H78KHIfRbZsY/view?usp=drivesdk">Gelanggang&nbsp;2</a>
+            <a class="wide-button" href="https://drive.google.com/file/d/1JM9k1qCxumv38SqXwTdz6JBnG6kqcB4S/view?usp=drivesdk">Gelanggang&nbsp;3</a>
+            <a class="wide-button prestasi" href="">Gelanggang Prestasi</a>
+        </div>
+        
+        <!-- Jadwal Rabu -->
+        <h4 class="h4rabu">|<br><br>- Jadwal Hari Rabu (25 Oct 2023) -</h4>
+        <div class="rabu">
+            <a class="wide-button" href="https://drive.google.com/file/d/1KWw-YB1IhMIpuuwdr9YHw5uxag4l_F8k/view?usp=drivesdk">Gelanggang&nbsp;1</a>
+            <a class="wide-button" href="https://drive.google.com/file/d/1KaNZvgTfwFMzSvJUhjpIV_gHHg0upmFo/view?usp=drivesdk">Gelanggang&nbsp;2</a>
+            <a class="wide-button" href="https://drive.google.com/file/d/1KanbAbg0JTHj-WThEUEUG43N_bSkPAk0/view?usp=drivesdk">Gelanggang&nbsp;3</a>
+            <a class="wide-button prestasi" href="">Gelanggang Prestasi</a>
+        </div>
+
+        <!-- kebawahin aja -->
+        <h4 class="h4rabu">|<br><br>
+            <!-- - Jadwal Hari Rabu (25 Oct 2023) - -->
+            - Kamis, Jum'at - <br>
+            Cooming Soon (Jadwal Belum Keluar)
+        </h4>
+
+        <!-- Jadwal Kamis -->
+        <h4 class="h4kamis">|<br><br>- Jadwal Hari Kamis (26 Oct 2023) -</h4>
+        <div class="kamis">
+            <a class="wide-button" href="">Gelanggang&nbsp;1</a>
+            <a class="wide-button" href="">Gelanggang&nbsp;2</a>
+            <a class="wide-button" href="">Gelanggang&nbsp;3</a>
+            <a class="wide-button prestasi" href="">Gelanggang Prestasi</a>
+        </div>
+        
+        <!-- Jadwal Jum'at -->
+        <h4 class="h4jumat">|<br><br>- Jadwal Hari Jum'at (27 Oct 2023) -</h4>
+        <div class="jumat">
+            <a class="wide-button" href="">Gelanggang&nbsp;1</a>
+            <a class="wide-button" href="">Gelanggang&nbsp;2</a>
+            <a class="wide-button" href="">Gelanggang&nbsp;3</a>
+            <a class="wide-button prestasi" href="">Gelanggang Prestasi</a>
+        </div>
+        
+        
+    </div>
+    <h4 style="font-size: .9em;">|<br><br>- Jadwal Detail Masing-masing Atlet -</h4>
+    <h4 style="color: rgba(255, 255, 0, 0.856); font-size: .85em;">Geser Tabel Buat Detailnya>></h4>
+    <div class="container">
+        
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Nama Atlet</th>
+                    <th>Tingkatan</th>
+                    <th>Jenis Pertandingan</th>
+                    <th>Kategori</th>
+                    <th>Gender</th>
+                    <th>Jadwalnya<br></th>
+                </tr>
+            </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Gias</td>
+                        <td>SD I</td>
+                        <td>Seni</td>
+                        <td>Tunggal</td>
+                        <td>Putra</td>
+                        <td><a class="action-button" href="https://drive.google.com/file/d/1H1VWgFpBGsS54VlKsGkl0vrJrLHv0H6z/view?usp=drivesdk ">Detail</a></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Fadhil</td>
+                        <td>SD I</td>
+                        <td>Seni</td>
+                        <td>Tunggal</td>
+                        <td>Putra</td>
+                        <td><a class="action-button" href="https://drive.google.com/file/d/1HM8wL2aQrWwlFSdyJGQl3BzNsUCxyVr_/view?usp=drivesdk">Detail</a></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Tristan</td>
+                        <td>SD II</td>
+                        <td>Seni</td>
+                        <td>Tunggal</td>
+                        <td>Putra</td>
+                        <td><a class="action-button" href="https://drive.google.com/file/d/1HL4vRGgPvZj0yopaFgBUOxyl9dz2UDB0/view?usp=drivesdk">Detail</a></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Nadhira</td>
+                        <td>SD II</td>
+                        <td>Seni</td>
+                        <td>Tunggal</td>
+                        <td>Putri</td>
+                        <td><a class="action-button" href="https://drive.google.com/file/d/1HKxC_HEAYlXdFJmj2LqoZeAYWGRDcbSZ/view?usp=drivesdk">Detail</a></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Rinka</td>
+                        <td>SD II</td>
+                        <td>Seni</td>
+                        <td>Tunggal</td>
+                        <td>Putri</td>
+                        <td><a class="action-button" href="https://drive.google.com/file/d/1HMS8kXguMvHPt7I9Fh4-Jne6-R_5Tpgk/view?usp=drivesdk">Detail</a></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Rere</td>
+                        <td>SD II</td>
+                        <td>Seni</td>
+                        <td>Tunggal</td>
+                        <td>Putri</td>
+                        <td><a class="action-button" href="https://drive.google.com/file/d/1HKrl1M9Pb9JOE3YjK5SZRdyAaOlxOcCT/view?usp=drivesdk">Detail</a></td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Evita</td>
+                        <td>SD II</td>
+                        <td>Tanding</td>
+                        <td>Kelas H (40-42 KG)</td>
+                        <td>Putri</td>
+                        <td><a class="action-button" href="https://drive.google.com/file/d/1IC5uh8QrbzoMUb0TtgFGdhbACXV6loHM/view?usp=drivesdk">Detail</a></td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Tiara</td>
+                        <td>SD II</td>
+                        <td>Tanding</td>
+                        <td>Kelas G (38-40 KG)</td>
+                        <td>Putri</td>
+                        <td><a class="action-button" href="https://drive.google.com/file/d/1I9sxoou5yrUOr4G8yXjsqzjuE4zevWZj/view?usp=drivesdk">Detail</a></td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Putri Alika</td>
+                        <td>SD II</td>
+                        <td>Tanding</td>
+                        <td>Kelas H (40-42 KG)</td>
+                        <td>Putra</td>
+                        <td><a class="action-button" href="https://drive.google.com/file/d/1I4oWl2_mma4ibgtRhG0Mbqb7Q9WkusuM/view?usp=drivesdk">Detail</a></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>10</td>
+                        <td>Rayna Nur</td>
+                        <td>SD II</td>
+                        <td>Tanding</td>
+                        <td>Kelas G (38-40 KG)</td>
+                        <td>Putri</td>
+                        <td><a class="action-button" href="https://drive.google.com/file/d/1IE5mAqScvxVg8UGy-2EaF9qlhYI2ZNhP/view?usp=drivesdk">Detail</a></td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>Raisha</td>
+                        <td>SMP</td>
+                        <td>Seni</td>
+                        <td>Tunggal</td>
+                        <td>Putri</td>
+                        <td><a class="action-button" href="https://drive.google.com/file/d/1H3jylxksRdScTuza80jjh6DiXh1bhWJB/view?usp=drivesdk">Detail</a></td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>Putri Nabila</td>
+                        <td>SMP</td>
+                        <td>Seni</td>
+                        <td>Tunggal</td>
+                        <td>Putri</td>
+                        <td><a class="action-button" href="https://drive.google.com/file/d/1H4kqVxGl5NMpb_--BaYUPABmOWjD1NjC/view?usp=drivesdk">Detail</a></td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td>Rachma N</td>
+                        <td>SMP</td>
+                        <td>Seni</td>
+                        <td>Tunggal</td>
+                        <td>Putri</td>
+                        <td><a class="action-button" href="https://drive.google.com/file/d/1HH2G5EoOLhpxPeoumFObFXrPfy6IRjQZ/view?usp=drivesdk">Detail</a></td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td>Novi</td>
+                        <td>SMP</td>
+                        <td>Seni</td>
+                        <td>Tunggal</td>
+                        <td>Putri</td>
+                        <td><a class="action-button" href="https://drive.google.com/file/d/1HDAlLco_1OHu_jXLRjHxos73UqW3LWsQ/view?usp=drivesdk">Detail</a></td>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td>Karin & Irna</td>
+                        <td>SMP</td>
+                        <td>Seni</td>
+                        <td>Ganda</td>
+                        <td>Putri</td>
+                        <td><a class="action-button" href="ups.html">Detail</a></td>
+                    </tr>
+                    <tr>
+                        <td>16</td>
+                        <td>Kusmaya</td>
+                        <td>SMP</td>
+                        <td>Tanding</td>
+                        <td>Kelas C (36-39 KG)</td>
+                        <td>Putra</td>
+                        <td><a class="action-button" href="https://drive.google.com/file/d/1KbFbhNs5hlrRwmU-HnlyHRTkgniFVpWP/view?usp=drivesdk">Detail</a></td>
+                    </tr>
+                    <tr>
+                        <td>17</td>
+                        <td>Reynatan</td>
+                        <td>SMP</td>
+                        <td>Tanding</td>
+                        <td>Kelas H (51-54 KG)</td>
+                        <td>Putra</td>
+                        <td><a class="action-button" href="https://drive.google.com/file/d/1Kh7GGKJfoGHbq_GEFFAG-vSAuRFwS-lF/view?usp=drivesdk">Detail</a></td>
+                    </tr>
+                    <tr>
+                        <td>18</td>
+                        <td>Larissa A</td>
+                        <td>SMP</td>
+                        <td>Tanding</td>
+                        <td>Kelas E (42-45 KG)</td>
+                        <td>Putri</td>
+                        <td><a class="action-button" href="https://drive.google.com/file/d/1KfuUKZvxWsC4z6VhrV6UbbI2Woi6zE2F/view?usp=drivesdk">Detail</a></td>
+                    </tr>
+                    <tr>
+                        <td>19</td>
+                        <td>Siti Rahma A</td>
+                        <td>SMP</td>
+                        <td>Tanding</td>
+                        <td>Kelas F (45-48 KG)</td>
+                        <td>Putri</td>
+                        <td><a class="action-button" href="https://drive.google.com/file/d/1KpIxmtGlOhhzTZ0PWB0eKnIdJZUgZa0P/view?usp=drivesdk">Detail</a></td>
+                    </tr>
+                </tbody>
+        </table>
+
+        <br><br>
+
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Nama Atlet</th>
+                    <th>Tingkatan</th>
+                    <th>Jenis Pertandingan</th>
+                    <th>Kategori</th>
+                    <th>Gender</th>
+                    <th>Jadwalnya</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Ojan</td>
+                    <td>SMA</td>
+                    <td>Tanding</td>
+                    <td>Kelas B (43-47 KG)</td>
+                    <td>Putra</td>
+                    <td><a class="action-button" href="ups.html">Detail</a></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Nazla (SMKN 1)</td>
+                    <td>SMA</td>
+                    <td>Seni</td>
+                    <td>Tunggal</td>
+                    <td>Putri</td>
+                    <td><a class="action-button" href="ups.html">Detail</a></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Dinda Aulia</td>
+                    <td>SMA</td>
+                    <td>Seni</td>
+                    <td>Tunggal</td>
+                    <td>Putri</td>
+                    <td><a class="action-button" href="https://drive.google.com/file/d/1HTnEmvtWzRL0qz7q9a5g3_a-6jw4AxhJ/view?usp=drivesdk">Detail</a></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Egin, Nazla, Uwok</td>
+                    <td>SMA</td>
+                    <td>Seni</td>
+                    <td>Regu</td>
+                    <td>Putri</td>
+                    <td><a class="action-button" href="ups.html">Detail</a></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Agung</td>
+                    <td>Dewasa</td>
+                    <td>Seni</td>
+                    <td>Tunggal</td>
+                    <td>Putra</td>
+                    <td><a class="action-button" href="https://drive.google.com/file/d/1H9mApF8qjpcraxgbbpX-YT4LNnup6kvz/view?usp=drivesdk">Detail</a></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Bayyin, Riki, Zaskha</td>
+                    <td>Dewasa</td>
+                    <td>Seni</td>
+                    <td>Regu</td>
+                    <td>Putra</td>
+                    <td><a class="action-button" href="ups.html">Detail</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+        <footer>
+            <p>- Made By : Zaskha Sasmita -</p>
+            <p>Link web Ini Dibuat agar memudahkan teman-teman dalam mencari informasi jadwal Portue khusus Panglipur Kota Bandung</p>
+            <p>Jika Ada Tombol yang tidak bisa di buka, berarti memamng jadwal dari pihak panitianya belum keluar</p>
+            <p>Semoga Membantu, dan Selamat Bertanding &#128521; &#x1F4AA;</p>
+        </footer>
+
+
+</body>
+</html>
